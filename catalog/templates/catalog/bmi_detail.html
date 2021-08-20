@@ -1,0 +1,9 @@
+{% extends "base_generic.html"%}
+
+{% block content %}
+    <h1>Name: {{bmi}}</h1>
+    <hr>
+    <p><b>키</b> : {{bmi.height}}</p> 
+    <p><b>몸무게</b>: {{bmi.weight}}</b></p>
+    <p>bmi = {{bmi.bmi}}</p>
+{% endblock %}

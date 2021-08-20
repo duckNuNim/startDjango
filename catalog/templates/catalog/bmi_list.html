@@ -1,0 +1,15 @@
+{% extends "base_generic.html"%}
+
+{% block content %}
+    <h1>BMI Data List</h1>
+        <hr>
+        {% if bmi_list %}
+            <ul>
+                {% for bmi in bmi_list %}
+                <li><b><a href="{{ bmi.get_absolute_url }}">{{bmi}}</a></b> (키 : {{bmi.weight}}, 몸무게 : {{bmi.height}})</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+    {% endif %}
+    <a href="{% url 'addBmi' %}"><input type="button" value="신규데이터 등록"></a>
+{% endblock %}
